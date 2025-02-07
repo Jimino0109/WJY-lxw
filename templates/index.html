@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机道路名称</title>
+</head>
+<body>
+    <h1>随机显示五个路名</h1>
+    <form method="POST">
+        <textarea name="road_names" rows="10" cols="50" placeholder="请输入道路名称，每行一个"></textarea><br><br>
+        <button type="submit">随机显示五个路名</button>
+    </form>
+
+    <h2>结果：</h2>
+    <ul>
+        {% for road in random_roads %}
+            <li>{{ road }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
